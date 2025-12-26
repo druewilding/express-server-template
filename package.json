@@ -7,16 +7,16 @@
     "server",
     "template"
   ],
-  "homepage": "https://github.com/aimeerivers/express-server-template#readme",
+  "homepage": "https://github.com/druewilding/express-server-template#readme",
   "bugs": {
-    "url": "https://github.com/aimeerivers/express-server-template/issues"
+    "url": "https://github.com/druewilding/express-server-template/issues"
   },
   "license": "ISC",
-  "author": "aimee rivers",
+  "author": "Drue Wilding",
   "main": "dist/src/server.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aimeerivers/express-server-template.git"
+    "url": "git+https://github.com/druewilding/express-server-template.git"
   },
   "type": "module",
   "scripts": {
