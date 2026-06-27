@@ -3,8 +3,8 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 
-import packageJson from "../package.json" with { type: "json" };
-import { mountApi } from "./api.js";
+import packageJson from "../../package.json" with { type: "json" };
+import { mountApi } from "./api/index.js";
 import { welcomePage } from "./views/welcome-page.js";
 
 dotenv.config();
@@ -15,7 +15,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 mountApi("/api/v1", app);
 
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, "../../public")));
+app.use(express.static(path.join(__dirname, "../../../public")));
 
 app.get("/", (_req, res) => {
   res.send(welcomePage());

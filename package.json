@@ -34,7 +34,7 @@
     "package:lint": "npx npm-package-json-lint .",
     "start": "node dist/src/server.js",
     "start:watch": "nodemon dist/src/server.js",
-    "test": "NODE_ENV=test node --test dist/test/*.test.js"
+    "test": "NODE_ENV=test node --test 'dist/test/**/*.test.js'"
   },
   "dependencies": {
     "dotenv": "17.4.2",
