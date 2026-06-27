@@ -1,5 +1,5 @@
 import type { KlodsChild } from "klods-js";
-import { content, footer, header, page, sidebar } from "klods-js";
+import { content, footer, header, page, sidebar, sidebarToggle } from "klods-js";
 
 type PageOptions = {
   title: string;
@@ -12,14 +12,14 @@ export function htmlPage({ title, headerContent, sidebarContent, mainContent }: 
   const hasSidebar = sidebarContent !== undefined;
 
   const body = page({ sidebar: hasSidebar }, [
-    headerContent !== undefined ? header(headerContent) : null,
+    headerContent !== undefined ? header(hasSidebar ? [sidebarToggle(), headerContent] : headerContent) : null,
     hasSidebar ? sidebar(sidebarContent) : null,
     content(mainContent),
     footer("Express Server Template"),
   ]);
 
   return `<!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
