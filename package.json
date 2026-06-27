@@ -39,6 +39,8 @@
     "app-root-path": "3.1.0",
     "dotenv": "17.4.2",
     "express": "5.2.1",
+    "klods-css": "1.21.1",
+    "klods-js": "2.9.1",
     "pug": "3.0.4"
   },
   "devDependencies": {
