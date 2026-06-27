@@ -1,3 +1,8 @@
 import config from "eslint-config-plus-prettier";
 
-export default [config];
+export default [
+  config,
+  {
+    ignores: ["public/scripts/main.js"],
+  },
+];

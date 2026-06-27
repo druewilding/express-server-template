@@ -20,10 +20,13 @@
   },
   "type": "module",
   "scripts": {
-    "build": "tsc",
-    "build:watch": "tsc --watch",
+    "build": "tsc && vite build",
+    "build:client": "vite build",
+    "build:client:watch": "vite build --watch",
+    "build:server": "tsc",
+    "build:server:watch": "tsc --watch",
     "clean": "rm -rf dist",
-    "dev": "concurrently \"npm run build:watch\" \"npm run start:watch\" \"npm run tailwind:css:watch\"",
+    "dev": "concurrently \"npm run build:server:watch\" \"npm run start:watch\" \"npm run build:client:watch\"",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint --fix",
@@ -31,33 +34,25 @@
     "package:lint": "npx npm-package-json-lint .",
     "start": "node dist/src/server.js",
     "start:watch": "nodemon dist/src/server.js",
-    "tailwind:css": "postcss src/styles/style.css -o public/styles/style.css",
-    "tailwind:css:watch": "postcss src/styles/style.css -o public/styles/style.css --watch --verbose",
-    "test": "NODE_ENV=test node --test dist/test/*.test.js"
+    "test": "NODE_ENV=test node --test 'dist/test/**/*.test.js'"
   },
   "dependencies": {
-    "app-root-path": "3.1.0",
     "dotenv": "17.4.2",
     "express": "5.2.1",
-    "pug": "3.0.4"
+    "klods-js": "2.9.1"
   },
   "devDependencies": {
-    "@tailwindcss/forms": "0.5.11",
-    "@tailwindcss/postcss": "4.3.1",
-    "@tailwindcss/typography": "0.5.20",
     "@types/express": "5.0.6",
     "@types/node": "25.9.4",
     "@types/supertest": "6.0.3",
-    "autoprefixer": "10.5.0",
     "concurrently": "9.2.3",
-    "eslint-config-plus-prettier": "4.2.16",
+    "eslint-config-plus-prettier": "4.3.0",
+    "klods-css": "1.21.1",
     "nodemon": "3.1.14",
-    "postcss": "8.5.15",
-    "postcss-cli": "11.0.1",
-    "postcss-minify": "1.2.0",
+    "sass": "1.81.0",
     "supertest": "7.2.2",
-    "tailwindcss": "4.3.1",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "vite": "8.1.0"
   },
   "engines": {
     "node": ">=24.0.0",
