@@ -21,10 +21,10 @@
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
-    "build:server": "tsc",
-    "build:server:watch": "tsc --watch",
     "build:client": "vite build",
     "build:client:watch": "vite build --watch",
+    "build:server": "tsc",
+    "build:server:watch": "tsc --watch",
     "clean": "rm -rf dist",
     "dev": "concurrently \"npm run build:server:watch\" \"npm run start:watch\" \"npm run build:client:watch\"",
     "format": "prettier --write .",
