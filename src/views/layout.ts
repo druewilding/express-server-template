@@ -6,17 +6,16 @@ type PageOptions = {
   headerContent?: KlodsChild | KlodsChild[];
   sidebarContent?: KlodsChild | KlodsChild[];
   mainContent: KlodsChild | KlodsChild[];
-  footerContent?: KlodsChild | KlodsChild[];
 };
 
-export function htmlPage({ title, headerContent, sidebarContent, mainContent, footerContent }: PageOptions): string {
+export function htmlPage({ title, headerContent, sidebarContent, mainContent }: PageOptions): string {
   const hasSidebar = sidebarContent !== undefined;
 
   const body = page({ sidebar: hasSidebar }, [
     headerContent !== undefined ? header(headerContent) : null,
     hasSidebar ? sidebar(sidebarContent) : null,
     content(mainContent),
-    footerContent !== undefined ? footer(footerContent) : null,
+    footer("Express Server Template"),
   ]);
 
   return `<!DOCTYPE html>

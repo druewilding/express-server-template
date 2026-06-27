@@ -8,6 +8,5 @@ export function welcomePage(): string {
     headerContent: strong("Express Server Template"),
     sidebarContent: [p("This is the sidebar content."), p("You can add more content here.")],
     mainContent: [h1("Welcome!"), p("This is the welcome page for the Express Server Template.")],
-    footerContent: "Express Server Template",
   });
 }
