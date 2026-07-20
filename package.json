@@ -43,16 +43,16 @@
   },
   "devDependencies": {
     "@types/express": "5.0.6",
-    "@types/node": "25.9.4",
+    "@types/node": "25.9.5",
     "@types/supertest": "6.0.3",
-    "concurrently": "9.2.3",
-    "eslint-config-plus-prettier": "4.3.0",
-    "klods-css": "1.21.1",
+    "concurrently": "9.2.4",
+    "eslint-config-plus-prettier": "4.3.1",
+    "klods-css": "1.29.0",
     "nodemon": "3.1.14",
-    "sass": "1.81.0",
+    "sass": "1.101.0",
     "supertest": "7.2.2",
     "typescript": "5.9.3",
-    "vite": "8.1.0"
+    "vite": "8.1.5"
   },
   "engines": {
     "node": ">=24.0.0",
